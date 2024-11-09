@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Te Amo</title>
     <style>
+        /* Estilos generales */
         body {
             display: flex;
             justify-content: center;
@@ -15,15 +16,18 @@
             font-family: 'Arial', sans-serif;
             color: #fff;
             overflow: hidden;
+            text-align: center;
         }
 
         h1 {
-            font-size: 4em;
+            font-size: 5vw; /* Usa unidades relativas */
             font-weight: bold;
             animation: animateText 4s ease-in-out infinite;
             text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            margin: 0;
         }
 
+        /* Animación para el texto */
         @keyframes animateText {
             0% {
                 transform: scale(1);
@@ -47,14 +51,15 @@
             }
         }
 
-        /* Efecto de "pulse" para el corazón */
+        /* Efecto de pulsación para el corazón */
         .heart {
-            font-size: 6em;
+            font-size: 10vw; /* Usa unidades relativas para el tamaño */
             animation: pulse 1.5s infinite;
             display: inline-block;
             margin-left: 20px;
         }
 
+        /* Animación de pulsación para el corazón */
         @keyframes pulse {
             0% {
                 transform: scale(1);
@@ -64,6 +69,27 @@
             }
             100% {
                 transform: scale(1);
+            }
+        }
+
+        /* Media Queries para hacer el diseño más responsivo */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 7vw; /* Reducción del tamaño del texto en pantallas más pequeñas */
+            }
+
+            .heart {
+                font-size: 12vw; /* Ajuste del tamaño del corazón en pantallas más pequeñas */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 9vw; /* Tamaño aún más pequeño en móviles muy pequeños */
+            }
+
+            .heart {
+                font-size: 14vw; /* Ajuste máximo para pantallas pequeñas */
             }
         }
 
