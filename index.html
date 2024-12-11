@@ -72,6 +72,22 @@
             }
         }
 
+        /* Estilos para el h2 y la cara */
+        h2 {
+            font-size: 4vw;
+            font-weight: bold;
+            animation: animateText 4s ease-in-out infinite;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            margin: 10px 0;
+        }
+
+        .face {
+            font-size: 6vw;
+            animation: pulse 1.5s infinite;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
         /* Media Queries para hacer el diseño más responsivo */
         @media (max-width: 768px) {
             h1 {
@@ -80,6 +96,14 @@
 
             .heart {
                 font-size: 12vw; /* Ajuste del tamaño del corazón en pantallas más pequeñas */
+            }
+
+            h2 {
+                font-size: 6vw; /* Ajuste de tamaño de h2 en pantallas más pequeñas */
+            }
+
+            .face {
+                font-size: 8vw; /* Ajuste del tamaño de la cara en pantallas más pequeñas */
             }
         }
 
@@ -90,6 +114,14 @@
 
             .heart {
                 font-size: 14vw; /* Ajuste máximo para pantallas pequeñas */
+            }
+
+            h2 {
+                font-size: 8vw; /* Tamaño aún más pequeño de h2 */
+            }
+
+            .face {
+                font-size: 10vw; /* Ajuste máximo para la cara */
             }
         }
 
