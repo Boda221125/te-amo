@@ -35,7 +35,7 @@ body, html {
 
 /* Caja de texto con borde alrededor de "TE AMO" */
 .love-message {
-    background-image: url('imagenes/fondo-te-amo.jpg');  /* Imagen de fondo para el "TE AMO" */
+    background-image: url('fondo-te-amo.jpg');  /* Imagen de fondo para el "TE AMO" */
     background-size: cover;  /* Asegura que la imagen cubra toda la caja */
     background-position: center;  /* Centra la imagen */
     background-repeat: no-repeat;  /* Evita que la imagen se repita */
