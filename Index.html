@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TE AMO</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <!-- Música de fondo -->
+    <audio id="background-music" loop>
+        <source src="musica/musica.mp3" type="audio/mp3">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
+
+    <!-- Botón para iniciar la música -->
+    <button id="playMusic">Reproducir Música</button>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <!-- Texto de bienvenida -->
+        <div class="text-container">
+            <div class="love-message">
+                <h1>TE AMO</h1>
+            </div>
+            <p>
+                <video autoplay loop muted>
+                    <source src="musica/video-fondo.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+                Han pasado siete años maravillosos desde que comenzamos este viaje juntos. Cada día contigo ha sido un regalo, un regalo de amor, crecimiento y aventura. Juntos hemos superado obstáculos, hemos reído, hemos llorado, pero sobre todo, hemos aprendido a amarnos más profundamente en cada paso.
+
+                Este 22 de noviembre, renuevo mi promesa: seguiré eligiéndote todos los días, te amaré con todo lo que soy y te acompañaré en cada uno de nuestros sueños y desafíos. Gracias por ser mi fuerza, mi confidente, mi amor eterno. No existe un deseo más grande en mi corazón que pasar cada segundo del resto de mi vida contigo, en este hermoso viaje llamado vida.
+            </p>
+        </div>
+
+        <!-- Carrusel de imágenes -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item"><img src="imagenes/imagen 1.jpg" alt="Imagen 1"></div>
+                <div class="carousel-item"><img src="imagenes/imagen 4.jpg" alt="Imagen 3"></div>
+                <div class="carousel-item"><img src="imagenes/imagen 3.jpg" alt="Imagen 3"></div>
+                <div class="carousel-item larger"><img src="imagenes/imagen 2.jpg" alt="Imagen 2"></div>
+                <div class="carousel-item"><img src="imagenes/imagen 5.jpg" alt="Imagen 5"></div>
+                <div class="carousel-item"><img src="imagenes/imagen 6.jpg" alt="Imagen 6"></div>
+                <div class="carousel-item"><img src="imagenes/imagen 7.jpg" alt="Imagen 7"></div>
+                <div class="carousel-item"><img src="imagenes/imagen 8.jpg" alt="Imagen 8"></div>
+                <div class="carousel-item"><img src="imagenes/imagen 9.jpg" alt="Imagen 9"></div>
+                <div class="carousel-item"><img src="imagenes/imagen 10.jpg" alt="Imagen 10"></div>
+            </div>
+        </div>
+
+        <!-- Corazón que late debajo del carrusel -->
+        <div class="heartbeat-container">
+            <div class="heart"></div>
+        </div>
+    </div>
+
+    <!-- Contenedor de corazones -->
+    <div id="hearts-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
