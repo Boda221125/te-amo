@@ -3,134 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Te Amo</title>
-    <style>
-        /* Estilos generales */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: linear-gradient(to right, #ff7e5f, #feb47b);
-            font-family: 'Arial', sans-serif;
-            color: #fff;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 5vw; /* Usa unidades relativas */
-            font-weight: bold;
-            animation: animateText 4s ease-in-out infinite;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-            margin: 0;
-        }
-
-        /* Animación para el texto */
-        @keyframes animateText {
-            0% {
-                transform: scale(1);
-                color: #ff6ec7;
-            }
-            25% {
-                transform: scale(1.2);
-                color: #f9d423;
-            }
-            50% {
-                transform: scale(1);
-                color: #00bcd4;
-            }
-            75% {
-                transform: scale(1.2);
-                color: #ff5f6d;
-            }
-            100% {
-                transform: scale(1);
-                color: #ff6ec7;
-            }
-        }
-
-        /* Efecto de pulsación para el corazón */
-        .heart {
-            font-size: 10vw; /* Usa unidades relativas para el tamaño */
-            animation: pulse 1.5s infinite;
-            display: inline-block;
-            margin-left: 20px;
-        }
-
-        /* Animación de pulsación para el corazón */
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.3);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        /* Estilos para el h2 y la cara */
-        h2 {
-            font-size: 4vw;
-            font-weight: bold;
-            animation: animateText 4s ease-in-out infinite;
-            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-            margin: 10px 0;
-        }
-
-        .face {
-            font-size: 6vw;
-            animation: pulse 1.5s infinite;
-            display: inline-block;
-            margin-left: 20px;
-        }
-
-        /* Media Queries para hacer el diseño más responsivo */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 7vw; /* Reducción del tamaño del texto en pantallas más pequeñas */
-            }
-
-            .heart {
-                font-size: 12vw; /* Ajuste del tamaño del corazón en pantallas más pequeñas */
-            }
-
-            h2 {
-                font-size: 6vw; /* Ajuste de tamaño de h2 en pantallas más pequeñas */
-            }
-
-            .face {
-                font-size: 8vw; /* Ajuste del tamaño de la cara en pantallas más pequeñas */
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 9vw; /* Tamaño aún más pequeño en móviles muy pequeños */
-            }
-
-            .heart {
-                font-size: 14vw; /* Ajuste máximo para pantallas pequeñas */
-            }
-
-            h2 {
-                font-size: 8vw; /* Tamaño aún más pequeño de h2 */
-            }
-
-            .face {
-                font-size: 10vw; /* Ajuste máximo para la cara */
-            }
-        }
-
-    </style>
+    <title>TE AMO</title>
+    <link rel="stylesheet" href="Styles.css">
 </head>
 <body>
-    <div>
-        <h1> QUE TENGAS UN GRAN DÍA <br>ME ENCANTAS <span class="heart">❤️</span></h1><br>
-        <h2>Dile a Evelin que eres mía y no te presto<span class="face">😋</span></h2>
+    <!-- Música de fondo -->
+    <audio id="background-music" loop>
+        <source src="musica/musica.mp3" type="audio/mp3">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
+
+    <!-- Botón para iniciar la música -->
+    <button id="playMusic">Reproducir Música</button>
+
+    <!-- Contenedor principal -->
+    <div class="main-container">
+        <!-- Texto de bienvenida -->
+        <div class="text-container">
+            <div class="love-message">
+                <h1>TE AMO</h1>
+            </div>
+            <p>
+                <video autoplay loop muted>
+                    <source src="musica/video-fondo.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+                Han pasado siete años maravillosos desde que comenzamos este viaje juntos. Cada día contigo ha sido un regalo, un regalo de amor, crecimiento y aventura. Juntos hemos superado obstáculos, hemos reído, hemos llorado, pero sobre todo, hemos aprendido a amarnos más profundamente en cada paso.
+
+                Este 22 de noviembre, renuevo mi promesa: seguiré eligiéndote todos los días, te amaré con todo lo que soy y te acompañaré en cada uno de nuestros sueños y desafíos. Gracias por ser mi fuerza, mi confidente, mi amor eterno. No existe un deseo más grande en mi corazón que pasar cada segundo del resto de mi vida contigo, en este hermoso viaje llamado vida.
+            </p>
+        </div>
+
+        <!-- Carrusel de imágenes -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item"><img src="imagenes/imagen 1.jpg" alt="Imagen 1"></div>
+                <div class="carousel-item"><img src="imagenes/imagen 4.jpg" alt="Imagen 3"></div>
+                <div class="carousel-item"><img src="imagenes/imagen 3.jpg" alt="Imagen 3"></div>
+                <div class="carousel-item larger"><img src="imagenes/imagen 2.jpg" alt="Imagen 2"></div>
+                <div class="carousel-item"><img src="imagenes/imagen 5.jpg" alt="Imagen 5"></div>
+                <div class="carousel-item"><img src="imagenes/imagen 6.jpg" alt="Imagen 6"></div>
+                <div class="carousel-item"><img src="imagenes/imagen 7.jpg" alt="Imagen 7"></div>
+                <div class="carousel-item"><img src="imagenes/imagen 8.jpg" alt="Imagen 8"></div>
+                <div class="carousel-item"><img src="imagenes/imagen 9.jpg" alt="Imagen 9"></div>
+                <div class="carousel-item"><img src="imagenes/imagen 10.jpg" alt="Imagen 10"></div>
+            </div>
+        </div>
+
+        <!-- Corazón que late debajo del carrusel -->
+        <div class="heartbeat-container">
+            <div class="heart"></div>
+        </div>
     </div>
+
+    <!-- Contenedor de corazones -->
+    <div id="hearts-container"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
