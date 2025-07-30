@@ -130,6 +130,13 @@ h1 {
   animation: countdownAnimation 1.5s ease-in-out infinite;
 }
 
+/* Otra fuente solo para esta sección */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.seccion-informativa {
+  font-family: 'Playfair Display', serif;
+}
+
 @keyframes countdownAnimation {
   0% { transform: scale(1); opacity: 0.8; }
   50% { transform: scale(1.1); opacity: 1; }
