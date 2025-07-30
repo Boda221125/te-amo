@@ -166,5 +166,20 @@
     }
   }
   </script>
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  document.querySelectorAll('.photo-item').forEach((item) => {
+    observer.observe(item);
+  });
+</script>
 </body>
 </html>
