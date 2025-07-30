@@ -1,5 +1,6 @@
 /* Fuente principal */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 /* Estilo base */
 body {
@@ -20,7 +21,7 @@ body::after {
   position: fixed;
   width: 120px;
   height: 120px;
-  background-image: url('imagenes/flor-esquina.png'); /* Cambia por tu imagen */
+  background-image: url('imagenes/flor-esquina.png');
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 0;
@@ -86,6 +87,17 @@ h1 {
   border-radius: 50%;
 }
 
+/* Imagen circular especial para logo */
+.circle-image {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 100%;
+  border: 6px solid #d4af37;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
 .name {
   position: absolute;
   top: 50%;
@@ -101,6 +113,7 @@ h1 {
   color: #4d4035;
 }
 
+/* Cuenta regresiva */
 #countdown {
   margin-top: 30px;
 }
@@ -123,11 +136,19 @@ h1 {
   100% { transform: scale(1); opacity: 0.8; }
 }
 
-/* Emotes minimalistas */
-.church-emote, .party-emote, .dress-emote, .photo-emote {
-  font-size: 36px;
-  margin: 10px;
-  color: #b59f8b;
+/* Íconos reemplazados */
+.icon-image {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  margin: 10px auto;
+}
+
+@media (max-width: 2000px) {
+  .icon-image {
+    width: 118px;
+    height: 118px;
+  }
 }
 
 /* Ubicación */
@@ -155,6 +176,8 @@ h1 {
   font-size: 18px;
   color: #6c5749;
 }
+
+/* Galería de fotos */
 .photo-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -163,7 +186,6 @@ h1 {
   padding: 10px;
 }
 
-/* Oculta marcos si existían */
 .photo-item {
   background: none;
   box-shadow: none;
@@ -175,26 +197,16 @@ h1 {
   transition: all 0.6s ease-out;
 }
 
-/* Galería */
-/*.photo-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
-  margin-top: 40px;
-  padding: 0 16px;
-}*/
-
-/*.photo-item {
-  position: relative;
-  border: 3px solid #e9d8c5;
-  border-radius: 12px;
-  background-color: #fffaf7;
-  padding: 10px;
-}*/
+.photo-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .photo-item img {
   width: 100%;
-  border-radius: 10px;
+  max-width: 320px;
+  border-radius: 12px;
+  display: block;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
@@ -204,12 +216,19 @@ h1 {
 }
 
 .photo-text {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  font-size: 14px;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1em;
+  text-align: center;
+  margin-top: 8px;
+  color: #444;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.photo-item.visible .photo-text {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Video */
@@ -224,7 +243,7 @@ h1 {
   box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
 
-/* Música botón minimalista */
+/* Música */
 #music {
   position: fixed;
   top: 20px;
@@ -246,6 +265,21 @@ h1 {
 #music button:hover {
   background-color: #f7f1ed;
   transform: scale(1.05);
+}
+
+.music-icon-img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+#music-icon {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: #444;
+  text-align: center;
+  cursor: pointer;
 }
 
 /* Confirmación */
@@ -280,7 +314,9 @@ form label {
   text-align: left;
 }
 
-form input, form select, form textarea {
+form input,
+form select,
+form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 16px;
@@ -291,7 +327,9 @@ form input, form select, form textarea {
   background-color: #fefefe;
 }
 
-form input:focus, form select:focus, form textarea:focus {
+form input:focus,
+form select:focus,
+form textarea:focus {
   border-color: #c5a18b;
   outline: none;
   box-shadow: 0 0 8px rgba(197, 161, 139, 0.5);
@@ -332,127 +370,21 @@ form button:hover {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* RESPONSIVE: Teléfonos */
+/* Responsive: Teléfonos */
 @media (max-width: 768px) {
   h1 { font-size: 28px; }
   h2, h3 { font-size: 22px; }
   p, label { font-size: 16px; }
+
   .circle {
     width: 140px;
     height: 140px;
   }
+
   #countdown-timer {
     font-size: 28px;
   }
-  .photo-gallery {
-    grid-template-columns: 1fr;
-  }
-  #music button {
-    font-size: 14px;
-    padding: 6px 10px;
-  }
-  /* Imagen circular para el logo de los novios */
-.circle-image {
-  width: 130px;
-  height: 130px;
-  object-fit: cover;
-  border-radius: 100%;
-  border: 6px solid #d4af37;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-}
 
-/* Tamaño uniforme para íconos reemplazando emojis */
-.icon-image {
-  width: 58px;
-  height: 58px;
-  object-fit: contain;
-  margin: 0 auto;
-}
-
-@media (max-width: 2000px) {
-  .icon-image {
-    width: 118px;
-    height: 118px;
-  }
-
-  .circle-logo {
-    width: 90px;
-    height: 90px;
-  }
-}
-
-/* Estilo del botón de música nuevo */
-.music-icon-img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 5px;
-}
-
-#music-icon {
-  background-color: transparent;
-  border: none;
-  font-size: 16px;
-  color: #444;
-  text-align: center;
-  cursor: pointer;
-}
-  .photo-item {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease-out;
-}
-
-/* Cuando se muestra */
-.photo-item.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Galería animada */
-.photo-item {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease-out;
-}
-
-.photo-item.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Texto debajo de fotos */
-.photo-text {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.1em;
-  text-align: center;
-  margin-top: 8px;
-}
-
-
-.photo-item.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.photo-item img {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 12px;
-  display: block;
-}
-
-/* Frase debajo */
-.photo-text {
-  font-family: 'Dancing Script', cursive;
-  font-size: 1.1em;
-  text-align: center;
-  margin-top: 8px;
-  color: #444;
-}
-
-/* Móvil: escalera */
-@media (max-width: 600px) {
   .photo-gallery {
     flex-direction: column;
     align-items: center;
@@ -474,15 +406,14 @@ form button:hover {
   .photo-item img {
     width: 80%;
   }
-  .photo-text {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
-}
 
-.photo-item.visible .photo-text {
-  opacity: 1;
-  transform: translateY(0);
-}
+  .icon-image {
+    width: 72px;
+    height: 72px;
+  }
 
+  #music button {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
 }
