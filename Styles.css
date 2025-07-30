@@ -390,7 +390,27 @@ form button:hover {
   transform: translateY(0);
 }
 
-/* Estilo en forma de escalera para móvil */
+/* Galería animada */
+.photo-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.photo-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Texto debajo de fotos */
+.photo-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1em;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* Escalera solo en móvil */
 @media (max-width: 600px) {
   .photo-gallery {
     display: flex;
