@@ -137,6 +137,54 @@ h1 {
   font-family: 'Playfair Display', serif;
 }
 
+/* Sección informativa: iglesia, salón, vestimenta */
+.seccion-informativa {
+  font-family: 'Playfair Display', serif;
+  padding: 40px 20px;
+  background-color: #fdfaf6;
+  border-top: 2px solid #e5ddd5;
+  border-bottom: 2px solid #e5ddd5;
+  margin: 40px 0;
+}
+
+.seccion-informativa h2 {
+  font-size: 26px;
+  color: #5e4a3d;
+  margin-bottom: 16px;
+}
+
+.seccion-informativa p {
+  font-size: 18px;
+  color: #7a6453;
+}
+
+/* Ajuste para íconos dentro de esa sección */
+.seccion-informativa .icon-image {
+  width: 64px;
+  height: 64px;
+  margin: 12px auto;
+}
+
+/* Responsive: mejora íconos en móvil */
+@media (max-width: 768px) {
+  .seccion-informativa {
+    padding: 30px 10px;
+  }
+
+  .seccion-informativa h2 {
+    font-size: 22px;
+  }
+
+  .seccion-informativa p {
+    font-size: 16px;
+  }
+
+  .seccion-informativa .icon-image {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 @keyframes countdownAnimation {
   0% { transform: scale(1); opacity: 0.8; }
   50% { transform: scale(1.1); opacity: 1; }
