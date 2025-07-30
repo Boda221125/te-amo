@@ -391,7 +391,7 @@ form button:hover {
 }
 
 /* Estilo en forma de escalera para móvil */
-@media (max-width: 100px) {
+@media (max-width: 50px) {
   .photo-gallery {
     display: flex;
     flex-direction: column;
