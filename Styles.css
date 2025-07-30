@@ -337,7 +337,7 @@ form button:hover {
   width: 140px;
   height: 140px;
   object-fit: cover;
-  border-radius: 70%;
+  border-radius: 100%;
   border: 6px solid #d4af37;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
@@ -345,10 +345,10 @@ form button:hover {
 
 /* Tamaño uniforme para íconos reemplazando emojis */
 .icon-image {
-  width: 48px;
-  height: 48px;
+  width: 58px;
+  height: 58px;
   object-fit: contain;
-  display: inline-block
+  margin: 0 auto;
 }
 
 @media (max-width: 800px) {
@@ -357,8 +357,8 @@ form button:hover {
     height: 58px;
   }
     .circle-logo {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
   }
 }
 
