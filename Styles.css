@@ -378,4 +378,42 @@ form button:hover {
   text-align: center;
   cursor: pointer;
 }
+  .photo-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+/* Cuando se muestra */
+.photo-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Estilo en forma de escalera para móvil */
+@media (max-width: 600px) {
+  .photo-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .photo-item img {
+    width: 80%;
+    border-radius: 12px;
+  }
+
+  .photo-item.left {
+    align-self: flex-start;
+  }
+
+  .photo-item.center {
+    align-self: center;
+  }
+
+  .photo-item.right {
+    align-self: flex-end;
+  }
+}
 }
