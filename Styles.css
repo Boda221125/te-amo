@@ -155,6 +155,25 @@ h1 {
   font-size: 18px;
   color: #6c5749;
 }
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 10px;
+}
+
+/* Oculta marcos si existían */
+.photo-item {
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
 
 /* Galería */
 /*.photo-gallery {
@@ -410,25 +429,6 @@ form button:hover {
   margin-top: 8px;
 }
 
-.photo-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-  padding: 10px;
-}
-
-/* Oculta marcos si existían */
-.photo-item {
-  background: none;
-  box-shadow: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease-out;
-}
 
 .photo-item.visible {
   opacity: 1;
