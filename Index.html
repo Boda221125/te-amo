@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Invitación de Boda</title>
-  <link rel="stylesheet" href="Styles.css">
+  <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -19,42 +19,41 @@
   </section>
 
   <!-- Nombres de los Novios y Fecha -->
-  <section id="couple-names">
-    <p class="couple-quote">El comienzo de nuestra historia...</p><br>
-    <div class="circle">
-      <img src="imagenes/novios-circle.jpg" alt="" class="circle-image">
-      <span class="name">Airam & Alan</span><br>
-    </div>
-    <p class="date">22/11/2025</p><br>
-    <div id="countdown">
-      <h2>Falta para nuestra boda:</h2>
-      <div id="countdown-timer"></div>
-    </div>
-  </section><br><br>
+<section id="couple-names">
+  <p class="couple-quote">El comienzo de nuestra historia...</p><br>
+  <div class="circle">
+    <img src="INVITACION-BODA/imagen/logo-boda.jpg" alt="Logo Boda" class="circle-image">
+    <span class="name"></span><br>
+  </div>
+  <div id="countdown">
+    <h2>Falta para nuestra boda:</h2>
+    <div id="countdown-timer"></div>
+  </div>
+</section><br><br>
 
-  <!-- Ubicación de la Boda -->
-  <section id="location">
-    <h2>Ubicación del Salón y la Iglesia</h2>
-    <div class="location-item">
-      <a href="https://www.google.com/maps/place/Plaza+Principal+S/N,+San+Crist%C3%B3bal+Centro,+55000+Ecatepec+de+Morelos,+M%C3%A9x." target="_blank" rel="noopener noreferrer">
-        <span class="church-emote">⛪</span>
-      </a><br>
-      <p>Horario de Misa: 7:00 PM</p>
-    </div><br>
-    <div class="location-item">
-      <a href="https://www.google.com/maps/place/Av.+1ro+de+Mayo+9,+Adolfo+Ruiz+Cortines,+55050+Ecatepec+de+Morelos,+M%C3%A9x." target="_blank" rel="noopener noreferrer">
-        <span class="party-emote">🥂</span>
-      </a><br>
-      <p>Horario de Fiesta: 8:30 PM</p>
-    </div>
-  </section><br>
+<!-- Ubicación de la Boda -->
+<section id="location">
+  <h2>Ubicación del Salón y la Iglesia</h2>
+  <div class="location-item">
+    <a href="https://www.google.com/maps/place/Plaza+Principal+S/N,+San+Crist%C3%B3bal+Centro,+55000+Ecatepec+de+Morelos,+M%C3%A9x." target="_blank" rel="noopener noreferrer">
+      <img src="INVITACION-BODA/imagen/iglesia-icono.jpg" alt="Iglesia" class="icon-image">
+    </a><br>
+    <p>Horario de Misa: 7:00 PM</p>
+  </div><br>
+  <div class="location-item">
+    <a href="https://www.google.com/maps/place/Av.+1ro+de+Mayo+9,+Adolfo+Ruiz+Cortines,+55050+Ecatepec+de+Morelos,+M%C3%A9x." target="_blank" rel="noopener noreferrer">
+      <img src="INVITACION-BODA/imagen/copas-icono.jpg" alt="Fiesta" class="icon-image">
+    </a><br>
+    <p>Horario de Fiesta: 8:30 PM</p>
+  </div>
+</section><br>
 
-  <!-- Código de Vestimenta -->
-  <section id="dress-code">
-    <h2>Código de Vestimenta</h2> <br>
-    <p><span class="dress-emote">👗🤵</span> <br><br><strong>Formal</strong></p>
-    <br><br><p>prohibido usar color ROJO, o tonos claros</p>
-  </section><br>
+<!-- Código de Vestimenta -->
+<section id="dress-code">
+  <h2>Código de Vestimenta</h2> <br>
+  <img src="imagenen/vestimenta-icono.png" alt="Vestimenta Formal" class="icon-image"><br><br>
+  <p><strong>Formal <br><br>Prohibido usar color ROJO, o tonos claros</strong></p>
+</section><br>
 
   <!-- Galería de Fotos -->
   <section id="gallery">
@@ -86,13 +85,16 @@
   </section>
 
   <!-- Música de Fondo -->
-  <section id="music">
-    <button id="music-icon" onclick="toggleAudio()">🎶<br><span id="music-status">Reproducir</span></button>
-    <audio id="background-music" loop>
-      <source src="INVITACION-BODA/imagen/musica.mp3" type="audio/mp3">
-      Tu navegador no soporta el elemento de audio.
-    </audio>
-  </section>
+<section id="music">
+  <button id="music-icon" onclick="toggleAudio()">
+    <img src="imagenen/icono-musica.svg" alt="Icono Música" class="music-icon-img"><br>
+    <span id="music-status"></span>
+  </button>
+  <audio id="background-music" loop>
+    <source src="INVITACION-BODA/imagen/musica.mp3" type="audio/mp3">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+</section>
 
   <!-- Formulario de Confirmación -->
   <section id="confirmation">
