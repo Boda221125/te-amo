@@ -391,17 +391,17 @@ form button:hover {
 }
 
 /* Estilo en forma de escalera para móvil */
-@media (max-width: 50px) {
+@media (max-width: 5px) {
   .photo-gallery {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 2px;
   }
 
   .photo-item img {
-    width: 10%;
-    border-radius: 8px;
+    width: 5%;
+    border-radius: 2px;
   }
 
   .photo-item.left {
