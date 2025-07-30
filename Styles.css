@@ -353,12 +353,12 @@ form button:hover {
 
 @media (max-width: 600px) {
   .icon-image {
-    width: 48px;
-    height: 48px;
+    width: 58px;
+    height: 58px;
   }
     .circle-logo {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
 }
 
