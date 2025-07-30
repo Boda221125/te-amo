@@ -351,7 +351,7 @@ form button:hover {
   margin: 0 auto;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 2000px) {
   .icon-image {
     width: 118px;
     height: 118px;
