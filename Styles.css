@@ -332,4 +332,49 @@ form button:hover {
     font-size: 14px;
     padding: 6px 10px;
   }
+  /* Imagen circular para el logo de los novios */
+.circle-image {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 70%;
+  border: 6px solid #d4af37;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+/* Tamaño uniforme para íconos reemplazando emojis */
+.icon-image {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: inline-block
+}
+
+@media (max-width: 600px) {
+  .icon-image {
+    width: 36px;
+    height: 36px;
+  }
+    .circle-logo {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* Estilo del botón de música nuevo */
+.music-icon-img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+#music-icon {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: #444;
+  text-align: center;
+  cursor: pointer;
+}
 }
