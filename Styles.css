@@ -334,8 +334,8 @@ form button:hover {
   }
   /* Imagen circular para el logo de los novios */
 .circle-image {
-  width: 140px;
-  height: 140px;
+  width: 130px;
+  height: 130px;
   object-fit: cover;
   border-radius: 100%;
   border: 6px solid #d4af37;
@@ -351,14 +351,14 @@ form button:hover {
   margin: 0 auto;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 100px) {
   .icon-image {
     width: 58px;
     height: 58px;
   }
     .circle-logo {
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
   }
 }
 
