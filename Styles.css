@@ -353,8 +353,8 @@ form button:hover {
 
 @media (max-width: 600px) {
   .icon-image {
-    width: 48px;
-    height: 48px;
+    width: 118px;
+    height: 118px;
   }
 
   .circle-logo {
