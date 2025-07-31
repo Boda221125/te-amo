@@ -134,12 +134,12 @@ h1 {
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 .seccion-informativa {
-  font-family: 'Great Vibes', serif;
+  font-family: 'Great Vibes', cursive;
 }
 
 /* Sección informativa: iglesia, salón, vestimenta */
 .seccion-informativa {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Great Vibes', cursive;
   padding: 40px 20px;
   background-color: #fdfaf6;
   border-top: 2px solid #e5ddd5;
